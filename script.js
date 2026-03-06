@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const dots          = document.querySelectorAll('.dot');
 
 
-    // ─── 1. STICKY HEADER ───────────────────────────────────────────
+    //1. STICKY HEADER
     // Adds a shadow when user scrolls past the hero
     const heroSection = document.getElementById('home');
     
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     watchScroll(); // run once right away
 
 
-    // ─── 2. MOBILE MENU ─────────────────────────────────────────────
+    // 2. MOBILE MENU
     menuBtn.addEventListener('click', () => {
         const isOpen = navLinks.classList.toggle('active');
         menuBtn.classList.toggle('active');
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // ─── 3. SMOOTH SCROLL ───────────────────────────────────────────
+    //3. SMOOTH SCROLL 
     allNavLinks.forEach(link => {
         link.addEventListener('click', e => {
             e.preventDefault();
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // ─── 4. ACTIVE NAV LINK HIGHLIGHT ───────────────────────────────
+    //4. ACTIVE NAV LINK HIGHLIGHT
     const sections = document.querySelectorAll('section[id]');
 
     const highlightNav = () => {
@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', highlightNav);
 
 
-    // ─── 5. FAQ ACCORDION ───────────────────────────────────────────
+    //5. FAQ ACCORDION 
     faqItems.forEach(item => {
         item.querySelector('.faq-question').addEventListener('click', () => {
             const isOpen = item.classList.contains('active');
@@ -104,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // ─── 6. GALLERY FILTER ──────────────────────────────────────────
+    //6. GALLERY FILTER
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const filter = btn.dataset.filter;
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // ─── 7. ENERGY SHOWCASE (Redesigned Color Section) ─────────────
+    //7. ENERGY SHOWCASE (Redesigned Color Section)
     const energyDots    = document.querySelectorAll('.energy-dot');
     const energyShoe    = document.getElementById('energy-shoe-img');
     const energyBgText  = document.getElementById('energy-text');
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    // ─── 8. TESTIMONIALS CAROUSEL ───────────────────────────────────
+    //8. TESTIMONIALS CAROUSEL
     let currentSlide = 0;
 
     const goToSlide = (index) => {
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 4000);
 
 
-    // ─── 9. SCROLL REVEAL ANIMATIONS ────────────────────────────────
+    //9. SCROLL REVEAL ANIMATIONS
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
